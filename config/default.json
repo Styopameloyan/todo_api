@@ -7,7 +7,7 @@
     },
     "attachmentFolder": "public",
     "database": {
-        "database": "TODO",
+        "database": "Intranet",
         "username": "sa",
         "password": "Minden09",
         "host": "localhost",
