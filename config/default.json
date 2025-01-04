@@ -1,0 +1,23 @@
+{
+    "port": 5001,
+    "log": "/var/local/log/todo",
+    "logLevel": "error",
+    "secret": {
+        "url": ""
+    },
+    "attachmentFolder": "public",
+    "database": {
+        "database": "TODO",
+        "username": "sa",
+        "password": "Minden09",
+        "host": "localhost",
+        "port": 1433,
+        "dialect": "mssql",
+        "logging": false,
+        "dialectOptions": {
+            "options": {
+                "encrypt": false
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "intranet-api",
+  "version": "3.3.4",
+  "description": "Intranet API. Verbindung mit eine MSSQL DB. Automatisierte Websrevice für Alle Tabellen.",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "start": "tsc && node dist/server.js",
+    "start:ts": "ts-node ./src/server.ts",
+    "start:watch": "nodemon --inspect --watch dist --watch config dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "http://bfmgogs.bauformat.de/BaumannGroup/intranet-api.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "compression": "^1.7.4",
+    "config": "^3.3.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^6.13.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "rotating-file-stream": "^3.2.4",
+    "sequelize": "^6.37.3",
+    "swagger-jsdoc-express": "^4.1.0",
+    "tedious": "^17.0.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "@types/config": "^3.3.5",
+    "@types/express-serve-static-core": "^4.19.5",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mssql": "^6.0.8",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^18.19.50",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.10.0",
+    "nodemon": "^3.1.4",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^8.10.2",
+    "typescript": "^4.9.5"
+  }
+}
