@@ -27,7 +27,7 @@ class UserService extends UserSchema {
     static async find(filter) {
         const data: User[] = await UserSchema.findAll({
             where: filter,
-            order: [["department", "ASC"], ["displayName", "ASC"]],
+            order: [["displayName", "ASC"]],
         }) as User[];
 
         return data;
