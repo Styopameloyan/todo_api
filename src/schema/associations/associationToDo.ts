@@ -20,4 +20,13 @@ export const associationToDo = (): void => {
             as: "updater"
         }
     );
+    ToDoSchema.hasOne(
+        UserSchema,
+        {
+            sourceKey: "assignee",
+            foreignKey: "mail",
+            as: "assigneed"
+        }
+    );
+
 }; 

@@ -7,16 +7,17 @@ class ToDoService extends ToDoSchema {
 
     static async _create(data: ToDo): Promise<ToDoSchema> {
         const result: ToDoSchema = await ToDoSchema.create(data);
-        return result;
+        return this._read(result.dataValues.rowid);
     }
 
-    static async read(rowid: string): Promise<ToDoSchema> {
+    static async _read(rowid: string): Promise<ToDoSchema> {
         const filter = { rowid: rowid };
         const item: ToDoSchema = await ToDoSchema.findOne({
             where: filter,
             include: [
                 { model: UserSchema, as: "creator", attributes: { exclude: ['password'] } },
                 { model: UserSchema, as: "updater", attributes: { exclude: ['password'] } },
+                { model: UserSchema, as: "assigneed", attributes: { exclude: ['password'] } },
             ]
         });
 
@@ -25,17 +26,18 @@ class ToDoService extends ToDoSchema {
     }
 
     static async _update(data: ToDo, rowid: string): Promise<ToDoSchema> {
-        const item: ToDoSchema = await this.read(rowid);
+        const item: ToDoSchema = await this._read(rowid);
         const result: ToDoSchema = await item.update(data);
-        return result;
+        return this._read(result.dataValues.rowid);
     }
 
-    static async find(filter): Promise<ToDoSchema[]> {
+    static async _find(filter): Promise<ToDoSchema[]> {
         const data: ToDoSchema[] = await ToDoSchema.findAll({
             where: { ...filter },
             include: [
                 { model: UserSchema, as: "creator", attributes: { exclude: ['password'] } },
-                { model: UserSchema, as: "updater", attributes: { exclude: ['password'] } }
+                { model: UserSchema, as: "updater", attributes: { exclude: ['password'] } },
+                { model: UserSchema, as: "assigneed", attributes: { exclude: ['password'] } },
             ],
             order: [["createDate", "DESC"]]
         });
@@ -43,11 +45,10 @@ class ToDoService extends ToDoSchema {
         return data;
     }
 
-    static async delete(rowid: string): Promise<string> {
-        const item: ToDoSchema = await this.read(rowid);
+    static async _delete(rowid: string): Promise<ToDoSchema> {
+        const item: ToDoSchema = await this._read(rowid);
         await item.destroy();
-
-        return `successfully deleted: ${rowid}`;
+        return item;
     }
 
 

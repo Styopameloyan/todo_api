@@ -24,7 +24,7 @@ router.post('/create', async (req: Request, res: Response) => {
 router.get('/read/:rowid', async (req: Request, res: Response) => {
     try {
         const rowid: string = req.params.rowid;
-        const result: ToDoSchema = await ToDoService.read(rowid);
+        const result: ToDoSchema = await ToDoService._read(rowid);
         return res.status(200).json(result.dataValues);
     } catch (error) {
         return new HttpErrorResponse(error, res);
@@ -49,18 +49,18 @@ router.put('/update/:rowid', async (req: Request, res: Response) => {
 router.post('/find', async (req: Request, res: Response) => {
     try {
         const filter = req.body;
-        const result: ToDoSchema[] = await ToDoService.find({ ...filter })
+        const result: ToDoSchema[] = await ToDoService._find({ ...filter })
         return res.status(200).json(result);
     } catch (error) {
         return new HttpErrorResponse(error, res);
     }
 });
 
-router.delete('/delete', async (req: Request, res: Response) => {
+router.delete('/delete/:rowid', async (req: Request, res: Response) => {
     try {
-        const rowid: string = req.query.rowid as string;
-        const result: string = await ToDoService.delete(rowid)
-        return res.status(200).json(result);
+        const rowid: string = req.params.rowid;
+        const result: ToDoSchema = await ToDoService._delete(rowid)
+        return res.status(200).json(result.dataValues);
     } catch (error) {
         return new HttpErrorResponse(error, res);
     }

@@ -11,6 +11,7 @@ export interface ToDo {
     title?: string;
     description?: string;
     status?: string;
+    assignee?: string; // Zugewisene person
 
 
     // Standard Felder
@@ -35,7 +36,9 @@ export const initModel = () => {
             type: DataTypes.STRING,
             allowNull: false
         },
-
+        assignee: {
+            type: DataTypes.STRING,
+        },
 
 
         // Standard Felder

@@ -26,7 +26,8 @@ ALTER TABLE [TODO] ADD [description] [nvarchar](max) NULL
 GO 
 ALTER TABLE [TODO] ADD [status] [nvarchar](50) NOT NULL;
 GO
-
+ALTER TABLE [TODO] ADD [assignee] [nvarchar](100) NULL;
+GO
 
 -- UNIQUE key
 -- ALTER TABLE [TODO] ADD CONSTRAINT [TODO_title] UNIQUE([title])
