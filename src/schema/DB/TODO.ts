@@ -7,7 +7,7 @@ import { beforeCreate } from '../hooks/base/beforeCreate';
 import { beforeUpdate } from '../hooks/base/beforeUpdate';
 import { beforeBulkUpdate } from '../hooks/base/beforeBulkUpdate';
 
-export interface Comment {
+export interface ToDo {
     title?: string;
     description?: string;
     status?: string;
@@ -19,10 +19,11 @@ export interface Comment {
     updateUser?: string;
     updateDate?: Date;
     createDate?: Date;
+
 }
-export class CommentSchema extends Model<Comment> { }
+export class ToDoSchema extends Model<ToDo> { }
 export const initModel = () => {
-    CommentSchema.init({
+    ToDoSchema.init({
         title: {
             type: DataTypes.STRING,
             allowNull: false
@@ -55,7 +56,8 @@ export const initModel = () => {
         },
         createDate: {
             type: DataTypes.DATE
-        }
+        },
+
     },
         {
             freezeTableName: true,
@@ -71,7 +73,7 @@ export const initModel = () => {
         });
 }
 
-export default CommentSchema;
+export default ToDoSchema;
 
 
 

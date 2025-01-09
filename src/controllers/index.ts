@@ -4,16 +4,15 @@ import getSchemaClasses from "../schema/initSchemas";
 // Routes
 import { BaseController } from "./Base";
 import { UserController } from "./User";
-// import { DocumentController } from "./Documents";
-// import { DynamicDataController } from "./DynamicData";
-// import { CommentController } from "./Comment";
-const router: express.Router = express.Router();
+import { ToDoController } from "./ToDo";
 
+const router: express.Router = express.Router();
 const defineRoutes = async (): Promise<express.Router> => {
     // Hier neue Routen definieren
     // ...
 
     router.use("/users", UserController);
+    router.use("/todo", ToDoController);
 
 
 

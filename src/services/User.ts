@@ -26,6 +26,7 @@ class UserService extends UserSchema {
 
     static async find(filter) {
         const data: User[] = await UserSchema.findAll({
+            attributes: { exclude: ['password'] },
             where: filter,
             order: [["displayName", "ASC"]],
         }) as User[];
