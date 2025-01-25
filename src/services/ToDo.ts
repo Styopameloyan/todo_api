@@ -41,7 +41,6 @@ class ToDoService extends ToDoSchema {
             ],
             order: [["createDate", "DESC"]]
         });
-
         return data;
     }
 
