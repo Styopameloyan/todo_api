@@ -1,0 +1,1 @@
+{"version":3,"file":"create.js","sourceRoot":"","sources":["../../../../src/schema/mongoose/hooks/create.ts"],"names":[],"mappings":";;;;;;;;;;;;AAEA,MAAM,UAAU,GAAG,UAAgB,IAAoD;;QACnF,IAAI,CAAC,UAAU,GAAG,IAAI,IAAI,EAAE,CAAC;QAC7B,IAAI,IAAI,CAAC,KAAK;YAAE,IAAI,CAAC,UAAU,GAAG,IAAI,IAAI,EAAE,CAAC;QAE7C,IAAI,EAAE,CAAC;IACX,CAAC;CAAA,CAAA;AAEQ,gCAAU"}

@@ -1,0 +1,46 @@
+{
+    "cwd": ".",
+    "files": [
+        "**/*.ts",
+        "**/*.js"
+    ],
+    "document": {
+        "info": {
+            "title": "Intranet-API",
+            "description": "NodeJS-Server für das Intranet. Enthält ein gesamtes CRUD-System (Automatisiert).",
+            "version": "1.0.0",
+            "contact": {
+                "name": "",
+                "email": ""
+            }
+        },
+        "servers": [
+            {
+                "url": "https://dev.bauformat.de",
+                "description": "Testumgebung"
+            },
+            {
+                "url": "https://api.bauformat.de",
+                "description": "Produktion"
+            }
+        ],
+        "tags": {
+            "BaseService": "BaseService - (CRUD-System) für alle Tabellen.",
+            "Documents": "Dokumente werden abgelegt in der angegebenen Verzeichnis",
+            "Infoboard": "Infoboard hat Relationen mit TAGS & FILES",
+            "Contacts": "Die Kontakt Tabelle wird synchronisiert von AD",
+            "Notifications": "Notifications enthält die basis Webservice und plus 2 speziellen",
+            "TaskTree": "TaskTree wird in der MongoDB gespeichert",
+            "SystemInfo": "ein Webservice, holt die Systeminformationen"
+        },
+        "components": {
+            "securitySchemes": {
+                "Bearer": {
+                    "type": "http",
+                    "scheme": "bearer"
+                }
+            }
+        }
+    },
+    "external": []
+}

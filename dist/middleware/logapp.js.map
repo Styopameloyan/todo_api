@@ -1,0 +1,1 @@
+{"version":3,"file":"logapp.js","sourceRoot":"","sources":["../../src/middleware/logapp.ts"],"names":[],"mappings":";;AAAA,qCAAiC;AAEjC;;;;;;GAMG;AACH,MAAM,WAAW,GAAG,IAAA,gBAAM,EAAC,CAAC,IAAI,EAAE,IAAI,GAAG,EAAE,EAAE,EAAE;IAC3C,IAAI,IAAI,CAAC,IAAI;QAAE,IAAI,CAAC,GAAG,GAAG,IAAI,CAAC,IAAI,CAAC;IACpC,OAAO,IAAI,CAAC;AAChB,CAAC,CAAC,CAAC;AAEH,kBAAe,WAAW,CAAC"}

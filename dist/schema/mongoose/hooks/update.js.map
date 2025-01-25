@@ -1,0 +1,1 @@
+{"version":3,"file":"update.js","sourceRoot":"","sources":["../../../../src/schema/mongoose/hooks/update.ts"],"names":[],"mappings":";;;;;;;;;;;;AAEA,MAAM,UAAU,GAAG,UAAgB,IAAoD;;QACnF,IAAI,CAAC,MAAM,CAAC,EAAE,UAAU,EAAE,IAAI,IAAI,EAAE,EAAE,CAAC,CAAA;QACvC,IAAI,EAAE,CAAC;IACX,CAAC;CAAA,CAAA;AAEQ,gCAAU"}
